@@ -1,5 +1,6 @@
 <template>
   <div>
+  
   <v-card 
   color="black"
   height="4"
@@ -27,7 +28,8 @@
     width="70"
     fab
     tile
-  > 
+  >
+  <Black_stone/>
   </v-sheet>
   </v-flex>
   </div>
@@ -160,9 +162,8 @@
   >
   </v-card>
   
-  
-  
   </div>
+  
   </template>
 
 
@@ -192,67 +193,78 @@ color: white;
 </style>
 
 <script>
+import Black_stone from "../components/black_stone.vue";
+import White_stone from "../components/white_stone.vue";
 
-(( )=>{
+export default {
+  components: {
+    Black_stone,
+    White_stone,
+  },
+} //黒い石、白い石を呼び出し
 
 const $doc = document;
 
 var stage_1 = [];
 
 for (var i = 0; i < 8; ++i) {
-  stage_1.push(document.getElementById("board_a" + i));
+  stage_1.push(document.getElementById("board_a" + i)); //ボードa要素取得
 }
 
 var stage_2 = [];
 
 for (var i = 0; i < 8; ++i) {
-  stage_2.push(document.getElementById("board_b" + i));
+  stage_2.push(document.getElementById("board_b" + i)); //ボードb要素取得
 }
 
 var stage_3 = [];
 
 for (var i = 0; i < 8; ++i) {
-  stage_3.push(document.getElementById("board_c" + i));
+  stage_3.push(document.getElementById("board_c" + i)); //ボードc要素取得
 }
 
 var stage_4 = [];
 
 for (var i = 0; i < 8; ++i) {
-  stage_4.push(document.getElementById("board_d" + i));
+  stage_4.push(document.getElementById("board_d" + i)); //ボードd要素取得
 }
 
 var stage_5 = [];
 
 for (var i = 0; i < 8; ++i) {
-  stage_5.push(document.getElementById("board_e" + i));
+  stage_5.push(document.getElementById("board_e" + i)); //ボードe要素取得
 }
 
 var stage_6 = [];
 
 for (var i = 0; i < 8; ++i) {
-  stage_6.push(document.getElementById("board_f" + i));
+  stage_6.push(document.getElementById("board_f" + i)); //ボードf要素取得
 }
 
 var stage_7 = [];
 
 for (var i = 0; i < 8; ++i) {
-  stage_7.push(document.getElementById("board_g" + i));
+  stage_7.push(document.getElementById("board_g" + i)); //ボードg要素取得
 }
 
 var stage_8 = [];
 
 for (var i = 0; i < 8; ++i) {
-  stage_8.push(document.getElementById("board_h" + i));
+  stage_8.push(document.getElementById("board_h" + i)); //ボードh要素取得
 }
 
+console.log(stage_8);
+
+const user_siro = stone_siro 
+
+const user_kuro = stone_kuro
+
+const stone_nasi = 0;
+
+const stone_siro = 1;
+
+const stone_kuro = 2;
 
 
-
-
-
-  }
-
-
-)();
 
 </script>
